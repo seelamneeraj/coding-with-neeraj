@@ -1,0 +1,22 @@
+<div class="topic-content">
+    <h1>{{ topicData.title }}</h1>
+    <p>{{ topicData.content }}</p>
+  
+    <div *ngIf="topicData.topics">
+      <h2>Topics Covered:</h2>
+      <div *ngFor="let topic of topicData.topics">
+        <h3>{{ topic.name }}</h3>
+        <p>{{ topic.content }}</p>
+        <pre *ngIf="topic.syntax"><strong>Syntax:</strong> {{ topic.syntax }}</pre>
+  
+        <div *ngIf="topic.examples && topic.examples.length > 0">
+          <h4>Examples:</h4>
+          <div *ngFor="let example of topic.examples">
+            <p><strong>{{ example.description }}</strong></p>
+            <pre>{{ example.code }}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,58 @@
+<div class="topic-content">
+    <h1>{{ topicData?.title }}</h1>
+    <p>{{ topicData?.content }}</p>
+  
+    <h2>Why Choose Python?</h2>
+    <ul>
+      <li *ngFor="let reason of topicData?.details?.whyChoosePython">{{ reason }}</li>
+    </ul>
+  
+    <h2>Python Basic Concepts</h2>
+    <div *ngIf="topicData?.details?.basicConcepts">
+      <h3>Variables and Data Types</h3>
+      <p>{{ topicData.details.basicConcepts.variablesAndDataTypes }}</p>
+  
+      <h3>Operators</h3>
+      <p>{{ topicData.details.basicConcepts.operators }}</p>
+  
+      <h3>Comments</h3>
+      <p>{{ topicData.details.basicConcepts.comments }}</p>
+  
+      <h3>Control Structures</h3>
+      <p>{{ topicData.details.basicConcepts.controlStructures }}</p>
+  
+      <h3>Functions</h3>
+      <p>{{ topicData.details.basicConcepts.functions }}</p>
+  
+      <h3>Modules</h3>
+      <p>{{ topicData.details.basicConcepts.modules }}</p>
+    </div>
+  
+    <h2>Writing Your First Python Program</h2>
+    <p>{{ topicData?.details?.firstProgram.description }}</p>
+    <ol>
+      <li *ngFor="let step of topicData?.details?.firstProgram.steps">{{ step }}</li>
+    </ol>
+    <pre>{{ topicData?.details?.firstProgram.programCode }}</pre>
+  
+    <h2>Applications of Python</h2>
+    <div *ngFor="let app of topicData?.details?.applications">
+      <h3>{{ app.title }}</h3>
+      <p>{{ app.description }}</p>
+    </div>
+  
+    <h2>Advantages and Disadvantages of Python</h2>
+    <h3>Advantages</h3>
+    <ul>
+      <li *ngFor="let advantage of topicData?.details?.advantagesDisadvantages.advantages">{{ advantage }}</li>
+    </ul>
+  
+    <h3>Disadvantages</h3>
+    <ul>
+      <li *ngFor="let disadvantage of topicData?.details?.advantagesDisadvantages.disadvantages">{{ disadvantage }}</li>
+    </ul>
+  
+    <h2>Conclusion</h2>
+    <p>{{ topicData?.details?.conclusion }}</p>
+  </div>
+  

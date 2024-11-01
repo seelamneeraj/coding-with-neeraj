@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: linear-gradient(
+      135deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    background-size: 400% 400%;
+    animation: rainbowAnimation 10s ease infinite;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  @keyframes rainbowAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  body {
+    background: #ffffff; // Set this to your desired default background color for other pages
+  }
+  // Base button styling for all topic buttons
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
+  // Individual button color styling
+  .intro-button {
+    @extend .button;
+    background-color: #6a1b9a; // Deep purple
+    &:hover {
+      background-color: #4a148c; // Darker purple on hover
+    }
+  }
+  
+  .data-types-button {
+    @extend .button;
+    background-color: #0288d1; // Light blue
+    &:hover {
+      background-color: #0277bd; // Darker blue on hover
+    }
+  }
+  
+  .control-structures-button {
+    @extend .button;
+    background-color: #d32f2f; // Red
+    &:hover {
+      background-color: #c62828; // Darker red on hover
+    }
+  }
+  
+  .functions-modules-button {
+    @extend .button;
+    background-color: #388e3c; // Green
+    &:hover {
+      background-color: #2e7d32; // Darker green on hover
+    }
+  }
+  
+  .oop-button {
+    @extend .button;
+    background-color: #f57c00; // Orange
+    &:hover {
+      background-color: #ef6c00; // Darker orange on hover
+    }
+  }
+  

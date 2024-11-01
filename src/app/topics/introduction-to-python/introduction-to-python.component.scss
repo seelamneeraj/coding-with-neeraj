@@ -1,0 +1,121 @@
+// Common styling for the topic content layout
+.topic-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    h1 {
+      color: #4a90e2;
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  
+    h2, h3 {
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 15px;
+    }
+  
+    ul {
+      margin: 15px 0;
+      padding-left: 20px;
+  
+      li {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        color: #444;
+      }
+    }
+  
+    // Styling for code blocks and syntax
+    pre {
+      background-color: #e0e0e0;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: Consolas, "Courier New", monospace;
+      overflow-x: auto;
+      margin: 20px 0;
+  
+      code {
+        color: #d14;
+        font-weight: bold;
+      }
+    }
+  
+    // Styling for subtopics section
+    .subtopics {
+      margin-top: 20px;
+  
+      h3 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+  
+      .subtopic {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+  
+        p {
+          margin: 0;
+        }
+  
+        .syntax, .examples {
+          margin-top: 10px;
+        }
+  
+        .syntax {
+          font-style: italic;
+          color: #4a90e2;
+        }
+  
+        .example-code {
+          margin-top: 5px;
+          pre {
+            background-color: #f1f8ff;
+            border-left: 3px solid #4a90e2;
+          }
+        }
+      }
+    }
+  
+    // Responsive styling for mobile devices
+    @media (max-width: 600px) {
+      padding: 15px;
+  
+      h1 {
+        font-size: 24px;
+      }
+  
+      h2 {
+        font-size: 20px;
+      }
+  
+      p, li {
+        font-size: 14px;
+      }
+  
+      .subtopic {
+        padding: 10px;
+      }
+    }
+  }
+  

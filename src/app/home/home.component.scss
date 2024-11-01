@@ -1,0 +1,124 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #2e004f; // Dark violet base color
+  background-image: linear-gradient(145deg, #2e004f 0%, #47007b 70%, #6f00a7 100%);
+  color: #ffffff;
+  padding: 20px;
+
+  h1 {
+    margin-top: 30px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 5s infinite;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .topics-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center buttons horizontally
+    margin-top: 30px;
+  }
+
+  // Button adjustments for visibility against dark background
+  button {
+    background-color: #ffffff;
+    color: #2e004f;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #ffd700;
+      color: #2e004f;
+      transform: scale(1.05);
+      box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+// Base button styling for all topic buttons
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// Individual button color styling
+.intro-button {
+  @extend .button;
+  background-color: #6a1b9a;
+  &:hover {
+    background-color: #4a148c;
+  }
+}
+
+.data-types-button {
+  @extend .button;
+  background-color: #0288d1;
+  &:hover {
+    background-color: #0277bd;
+  }
+}
+
+.control-structures-button {
+  @extend .button;
+  background-color: #d32f2f;
+  &:hover {
+    background-color: #c62828;
+  }
+}
+
+.functions-modules-button {
+  @extend .button;
+  background-color: #388e3c;
+  &:hover {
+    background-color: #2e7d32;
+  }
+}
+
+.oop-button {
+  @extend .button;
+  background-color: #f57c00;
+  &:hover {
+    background-color: #ef6c00;
+  }
+}
+
+// Keyframe animation for rainbow text
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}

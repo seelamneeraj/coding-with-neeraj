@@ -1,0 +1,58 @@
+<div class="topic-container">
+  <h2>{{ topicData?.title }}</h2>
+  <p>{{ topicData?.content }}</p>
+
+  <h3>Types of Control Structures</h3>
+  <p>{{ topicData?.typesContent }}</p>
+
+  <h4>Sequential</h4>
+  <p>{{ topicData?.sequential.description }}</p>
+  <div>
+    <strong>Code:</strong>
+    <pre>{{ topicData?.sequential.code }}</pre>
+    <strong>Output:</strong>
+    <pre>{{ topicData?.sequential.output }}</pre>
+  </div>
+
+  <h4>Selection/Decision Control Statements</h4>
+  <p>{{ topicData?.selection.description }}</p>
+  <ul>
+    <li *ngFor="let item of topicData?.selection.types">{{ item }}</li>
+  </ul>
+
+  <h5>Simple if Statement</h5>
+  <p>{{ topicData?.selection.simpleIf.description }}</p>
+  <strong>Syntax:</strong>
+  <pre>{{ topicData?.selection.simpleIf.syntax }}</pre>
+  <strong>Code:</strong>
+  <pre>{{ topicData?.selection.simpleIf.code }}</pre>
+  <strong>Output:</strong>
+  <pre>{{ topicData?.selection.simpleIf.output }}</pre>
+
+  <h5>if-else Statement</h5>
+  <p>{{ topicData?.selection.ifElse.description }}</p>
+  <strong>Code:</strong>
+  <pre>{{ topicData?.selection.ifElse.code }}</pre>
+  <strong>Output:</strong>
+  <pre>{{ topicData?.selection.ifElse.output }}</pre>
+
+  <h4>Repetition</h4>
+  <p>{{ topicData?.repetition.description }}</p>
+  <ul>
+    <li *ngFor="let loop of topicData?.repetition.loops">{{ loop }}</li>
+  </ul>
+
+  <h5>For Loop</h5>
+  <p>{{ topicData?.repetition.forLoop.description }}</p>
+  <strong>Code:</strong>
+  <pre>{{ topicData?.repetition.forLoop.code }}</pre>
+  <strong>Output:</strong>
+  <pre>{{ topicData?.repetition.forLoop.output }}</pre>
+
+  <h5>While Loop</h5>
+  <p>{{ topicData?.repetition.whileLoop.description }}</p>
+  <strong>Code:</strong>
+  <pre>{{ topicData?.repetition.whileLoop.code }}</pre>
+  <strong>Output:</strong>
+  <pre>{{ topicData?.repetition.whileLoop.output }}</pre>
+</div>

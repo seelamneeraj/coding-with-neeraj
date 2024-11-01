@@ -1,0 +1,82 @@
+.login-container {
+    max-width: 300px;
+    margin: auto;
+    padding: 2em;
+    border-radius: 10px;
+    background-color: #4b0082; // Shiny dark purple
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  
+    h2 {
+      color: white;
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+  
+    label {
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      margin: 0.5em 0;
+    }
+  
+    input {
+      width: 100%;
+      padding: 0.7em;
+      margin: 0.5em 0;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+  
+    .error {
+      color: #ff4d4d;
+      margin-top: 0.5em;
+      font-weight: bold;
+    }
+  }
+  button {
+    width: 100%;
+    padding: 0.7em;
+    background-color: #ff0000; // Shiny red color
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  
+    &:hover {
+      background-color: #cc0000;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }
+  }
+  :host {
+    display: block;
+    min-height: 100vh;
+    background: linear-gradient(
+      135deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    background-size: 400% 400%;
+    animation: rainbowAnimation 10s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes rainbowAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  

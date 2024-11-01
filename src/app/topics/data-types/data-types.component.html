@@ -1,0 +1,55 @@
+<div class="topic-container">
+  <h2>{{ topicData?.title }}</h2>
+  <p>{{ topicData?.content }}</p>
+
+  <section>
+    <h3>Overview</h3>
+    <p>{{ topicData?.overview.intro }}</p>
+    <p>{{ topicData?.overview.description }}</p>
+  </section>
+
+  <section>
+    <h3>Common Data Types in Python</h3>
+    <ul>
+      <li *ngFor="let type of topicData?.commonDataTypes">{{ type }}</li>
+    </ul>
+  </section>
+
+  <section *ngIf="topicData?.numeric">
+    <h3>{{ topicData.numeric.title }}</h3>
+    <p>{{ topicData.numeric.description }}</p>
+    <div *ngFor="let type of topicData.numeric.types" class="data-type">
+      <h4>{{ type.name }}</h4>
+      <p>{{ type.content }}</p>
+      <pre>{{ type.example }}</pre>
+    </div>
+  </section>
+
+  <section *ngIf="topicData?.sequence">
+    <h3>{{ topicData.sequence.title }}</h3>
+    <p>{{ topicData.sequence.description }}</p>
+    <div *ngFor="let type of topicData.sequence.types" class="data-type">
+      <h4>{{ type.name }}</h4>
+      <p>{{ type.content }}</p>
+      <pre>{{ type.example }}</pre>
+    </div>
+  </section>
+
+  <section *ngIf="topicData?.boolean">
+    <h3>{{ topicData.boolean.title }}</h3>
+    <p>{{ topicData.boolean.description }}</p>
+    <pre>{{ topicData.boolean.example }}</pre>
+  </section>
+
+  <section *ngIf="topicData?.set">
+    <h3>{{ topicData.set.title }}</h3>
+    <p>{{ topicData.set.description }}</p>
+    <pre>{{ topicData.set.example }}</pre>
+  </section>
+
+  <section *ngIf="topicData?.dictionary">
+    <h3>{{ topicData.dictionary.title }}</h3>
+    <p>{{ topicData.dictionary.description }}</p>
+    <pre>{{ topicData.dictionary.example }}</pre>
+  </section>
+</div>
